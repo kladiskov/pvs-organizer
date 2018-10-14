@@ -1,10 +1,84 @@
+body {
+    font-family: Roboto;
+    background: #acb6e5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #86fde8, #acb6e5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #86fde8, #acb6e5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ 
+ }
+
 #container {
-    width: 300px;
-    margin: 0 auto;
-    border: 2px solid gray;
+    width: 400px;
+    margin: 100px auto;
+    background: #f7f7f7;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);/*create a shadowing effect around the border.*/
+}
+
+h1 {
+    background: #2980b9;
+    text-align: center;
+    color: white;
+    margin: 0;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+ul {
+    list-style: none;/*get rid of default bullet points being added by broswer for all the li inside ul*/
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    background: white;
+    height: 40px;/*Height of one li element*/
+    line-height: 40px;/* text in the li to take up avbl height of li which is specified above 'height'*/
+    color: #666;
+}
+
+li:nth-child(2n) {/*Give a different color for every alternate li */
+    background: #f7f7f7;
+}
+
+input {
+    font-size: 18px;
+    background-color: #f7f7f7;
+    width: 100%;
+    padding: 13px 13px 13px 20px;
+    box-sizing: border-box;/*The CSS box-sizing property allows us to include the padding and border in an element's total width and height.*/
+    color:#2980b9;
+    border: 3px solid rgba(0, 0, 0, 0);
+}
+
+input:focus {
+    background:fff;
+    border: 3px solid #2980b9;
+    outline: none;
 }
 
 .completed {
     color: gray;
     text-decoration: line-through;
+}
+
+.fa-plus {
+    float: right;
+}
+
+span {
+    background: #e74c3c;
+    height: 40px;
+    margin-right: 20px;
+    text-align: center;
+    color: white;
+    width:0;
+    display: inline-block;
+    transition: 0.2s linear;
+    opacity: 0;
+}
+
+li:hover span {
+    width: 40px;
+    opacity: 1.0;
 }
